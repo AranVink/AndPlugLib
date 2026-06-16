@@ -24,7 +24,7 @@ AndPlugLib is used in [AndPlug](https://play.google.com/store/apps/details?id=co
 - [Android 4.0.3](https://developer.android.com/about/versions/android-4.0.3) (API Level: 15) or later (`ICE_CREAM_SANDWICH_MR1`)
 - [CMake](https://cmake.org/) Release 3.4.1 or later
 - [Android Gradle Plugin](https://developer.android.com/studio/releases/gradle-plugin) 8.11.1) or later (`gradle:8.11.1`)
-- [AdPlug](https://github.com/adplug/adplug) Version 2.3.3 (_branch/tag:_ `release-2.3.3`)
+- [AdPlug](https://github.com/adplug/adplug) Version 2.4 (_branch/tag:_ `release-2.4`)
 - [libbinio](https://github.com/adplug/libbinio) Version 1.5 (_tag:_ `libbionio-1.5`)
 - [Oboe](https://github.com/google/oboe) Version 1.7.0 (_branch:_ `1.7-stable`)
 
@@ -37,10 +37,10 @@ Setup steps:
 3. Apply patches to AdPlug and libbinio
 4. Build library with Gradle, using Android Studio or directly from the command line 
 
-```
+```bash
 $ git clone https://github.com/omicronapps/AndPlugLib.git
 $ cd AndPlugLib/andpluglib/src/main/cpp/
-$ git clone --branch release-2.3.3 https://github.com/adplug/adplug.git
+$ git clone --branch adplug-2.4 https://github.com/adplug/adplug.git
 $ patch adplug/src/version.h -i adplug.patch
 $ git clone https://github.com/adplug/libbinio.git
 $ patch libbinio/src/binio.h -i libbinio.patch
@@ -55,10 +55,10 @@ AndPlugLib includes both instrumented unit tests and a simple test application.
 
 Located under `andpluglib/src/androidTest`.
 
-These tests are run on a hardware device or emulator, and verifies correct operation of the `PlayerService` implementation and its usage of the native AdPlug library. A set of songs need to be downloaded and installed in order  to run the instrumented tests.
+These tests are run on a hardware device or emulator, and verifies correct operation of the `PlayerService` implementation and its usage of the native AdPlug library. A set of songs need to be downloaded and installed in order to run the instrumented tests.
 
 Setup steps:
-```
+```bash
 cd AndPlugLib/andpluglib/src/androidTest/res/raw/
 wget http://modland.com/pub/modules/Ad%20Lib/EdLib%20D00/MSK/en%20lille%20test.d00 en_lille_test_d00 
 wget http://modland.com/pub/modules/Ad%20Lib/EdLib%20D00/MSK/fresh.d00 fresh_d00
@@ -74,7 +74,7 @@ Located under `app/src/main`.
 Uses hardcoded path to EdLib songs for playback testing (can be replaced by any other AdPlug compatible songs).
 
 Setup steps:
-```
+```bash
 cd AndPlugLib/app/src/main/assets/
 wget http://modland.com/pub/modules/Ad%20Lib/EdLib%20D00/MSK/en%20lille%20test.d00 
 wget http://modland.com/pub/modules/Ad%20Lib/EdLib%20D00/MSK/fresh.d00
@@ -429,6 +429,7 @@ Copyright (C) 2019-2025 [Fredrik Claesson](https://www.omicronapplications.com/)
 - 2.5.0 Additional player crash fixes
 - 2.6.0 Updated to Oboe v1.7.0, minor bugfixes, change to Apache License Version 2.0
 - 2.7.0 Fix for audio focus issue, use 16 KB ELF alignment, target Android 15 (API level 35)
+- 2.8.0 Update Adplug to 2.3.3 -> 2.4
 
 ## License
 
