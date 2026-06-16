@@ -33,15 +33,18 @@ set(BINIO_FILES
         ${BINIO}/binstr.cpp
         )
 
-# adplug-2.3.3
+# adplug-2.4.0
 set(ADPLUG_FILES
         ${ADPLUG}/adlibemu.c
         ${ADPLUG}/debug.c
         ${ADPLUG}/fmopl.c
         ${ADPLUG}/nukedopl.c
+        ${ADPLUG}/unlzh.c
+        ${ADPLUG}/unlzss.c
+        ${ADPLUG}/unlzw.c
         ${ADPLUG}/a2m.cpp
+        ${ADPLUG}/a2m-v2.cpp
         ${ADPLUG}/adl.cpp
-        ${ADPLUG}/adlib.cpp
         ${ADPLUG}/adplug.cpp
         ${ADPLUG}/adtrack.cpp
         ${ADPLUG}/amd.cpp
@@ -51,8 +54,11 @@ set(ADPLUG_FILES
         ${ADPLUG}/cff.cpp
         ${ADPLUG}/cmf.cpp
         ${ADPLUG}/cmfmcsop.cpp
+        ${ADPLUG}/coktel.cpp
+        ${ADPLUG}/composer.cpp
         ${ADPLUG}/d00.cpp
         ${ADPLUG}/database.cpp
+        ${ADPLUG}/depack.c
         ${ADPLUG}/dfm.cpp
         ${ADPLUG}/diskopl.cpp
         ${ADPLUG}/dmo.cpp
@@ -71,6 +77,7 @@ set(ADPLUG_FILES
         ${ADPLUG}/hyp.cpp
         ${ADPLUG}/imf.cpp
         ${ADPLUG}/jbm.cpp
+        ${ADPLUG}/kemuopl.cpp
         ${ADPLUG}/ksm.cpp
         ${ADPLUG}/lds.cpp
         ${ADPLUG}/mad.cpp
@@ -79,10 +86,13 @@ set(ADPLUG_FILES
         ${ADPLUG}/mkj.cpp
         ${ADPLUG}/msc.cpp
         ${ADPLUG}/mtk.cpp
+        ${ADPLUG}/mtr.cpp
         ${ADPLUG}/mus.cpp
         ${ADPLUG}/nemuopl.cpp
         ${ADPLUG}/player.cpp
         ${ADPLUG}/players.cpp
+        ${ADPLUG}/plx.cpp
+        ${ADPLUG}/pis.cpp
         ${ADPLUG}/protrack.cpp
         ${ADPLUG}/psi.cpp
         ${ADPLUG}/rad2.cpp
@@ -93,6 +103,7 @@ set(ADPLUG_FILES
         ${ADPLUG}/rol.cpp
         ${ADPLUG}/s3m.cpp
         ${ADPLUG}/sa2.cpp
+        ${ADPLUG}/sixdepack.cpp
         ${ADPLUG}/sng.cpp
         ${ADPLUG}/sop.cpp
         ${ADPLUG}/surroundopl.cpp
@@ -116,7 +127,7 @@ set(FLAGS "-O2")
 set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} ${FLAGS}")
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} ${FLAGS}")
 set(BINIO_FLAGS "PACKAGE_NAME=\"binio\";PACKAGE_TARNAME=\"libbinio\";PACKAGE_VERSION=\"1.5\";PACKAGE_STRING=\"binio 1.5\";PACKAGE_BUGREPORT=\"dn.tlp@gmx.net\";PACKAGE_URL=\"\";PACKAGE=\"libbinio\";VERSION=\"1.5\";STDC_HEADERS=1;HAVE_SYS_TYPES_H=1;HAVE_SYS_STAT_H=1;HAVE_STDLIB_H=1;HAVE_STRING_H=1;HAVE_MEMORY_H=1;HAVE_STRINGS_H=1;HAVE_INTTYPES_H=1;HAVE_STDINT_H=1;HAVE_UNISTD_H=1;HAVE_DLFCN_H=1")
-set(ADPLUG_FLAGS "PACKAGE_NAME=\"adplug\";PACKAGE_TARNAME=\"adplug\";PACKAGE_VERSION=\"2.3.3\";PACKAGE_STRING=\"adplug 2.3.3\";PACKAGE_BUGREPORT=\"\";PACKAGE_URL=\"\";NDEBUG=/**/;PACKAGE=\"adplug\";VERSION=\"2.3.3\";STDC_HEADERS=1;HAVE_SYS_TYPES_H=1;HAVE_SYS_STAT_H=1;HAVE_STDLIB_H=1;HAVE_STRING_H=1;HAVE_MEMORY_H=1;HAVE_STRINGS_H=1;HAVE_INTTYPES_H=1;HAVE_STDINT_H=1;HAVE_UNISTD_H=1;HAVE_DLFCN_H=1;HAVE_GETOPT_H=1;stricmp=strcasecmp")
+set(ADPLUG_FLAGS "PACKAGE_NAME=\"adplug\";PACKAGE_TARNAME=\"adplug\";PACKAGE_VERSION=\"2.4\";PACKAGE_STRING=\"adplug 2.4\";PACKAGE_BUGREPORT=\"\";PACKAGE_URL=\"\";NDEBUG=/**/;PACKAGE=\"adplug\";VERSION=\"2.4\";STDC_HEADERS=1;HAVE_SYS_TYPES_H=1;HAVE_SYS_STAT_H=1;HAVE_STDLIB_H=1;HAVE_STRING_H=1;HAVE_MEMORY_H=1;HAVE_STRINGS_H=1;HAVE_INTTYPES_H=1;HAVE_STDINT_H=1;HAVE_UNISTD_H=1;HAVE_DLFCN_H=1;HAVE_GETOPT_H=1;stricmp=strcasecmp")
 set_property(SOURCE ${BINIO_FILES} APPEND PROPERTY COMPILE_DEFINITIONS ${BINIO_FLAGS})
 set_property(SOURCE ${ADPLUG_FILES} APPEND PROPERTY COMPILE_DEFINITIONS ${ADPLUG_FLAGS})
 
