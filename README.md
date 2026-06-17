@@ -24,7 +24,7 @@ AndPlugLib is used in [AndPlug](https://play.google.com/store/apps/details?id=co
 - [Android 4.0.3](https://developer.android.com/about/versions/android-4.0.3) (API Level: 15) or later (`ICE_CREAM_SANDWICH_MR1`)
 - [CMake](https://cmake.org/) Release 3.4.1 or later
 - [Android Gradle Plugin](https://developer.android.com/studio/releases/gradle-plugin) 8.11.1) or later (`gradle:8.11.1`)
-- [AdPlug](https://github.com/adplug/adplug) Version 2.4 (_branch/tag:_ `release-2.4`)
+- [AdPlug](https://github.com/adplug/adplug) Version 2.4 (_tag:_ `adplug-2.4`)
 - [libbinio](https://github.com/adplug/libbinio) Version 1.5 (_tag:_ `libbionio-1.5`)
 - [Oboe](https://github.com/google/oboe) Version 1.7.0 (_branch:_ `1.7-stable`)
 
